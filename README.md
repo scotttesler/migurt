@@ -2,7 +2,7 @@
 
 _A database migration tool_
 
-### ENV
+## ENV
 
 migrt uses [dotenv](https://github.com/motdotla/dotenv) to parse environment
 variables from a `.env` file when `process.env.NODE_ENV != 'production'`.
@@ -19,7 +19,7 @@ TABLE_NAME_MIGRATIONS="public.migrations"
 TABLE_NAME_SEEDS="public.seeds"
 ```
 
-# TODO
+## TODO
 
 - [ ] Add MySQL support.
 
