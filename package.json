@@ -1,0 +1,58 @@
+{
+  "author": {
+    "name": "Scott Tesler",
+    "email": "scottiet123@gmail.com",
+    "url": "https://scotttesler.github.io/"
+  },
+  "bin": {
+    "migurt": "./src/bin/index.js",
+    "migurt-create-migration": "./src/bin/index-create-migration.js",
+    "migurt-create-seed": "./src/bin/index-create-seed.js",
+    "migurt-migrate": "./src/bin/index-migrate.js",
+    "migurt-revert-migrations": "./src/bin/index-revert-migrations.js",
+    "migurt-revert-seeds": "./src/bin/index-revert-seeds.js",
+    "migurt-seed": "./src/bin/index-seed.js"
+  },
+  "bugs": {
+    "email" : "scottiet123@gmail.com",
+    "url" : "https://github.com/scotttesler/migurt/issues"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.15.1",
+    "dotenv": "^4.0.0",
+    "lodash": "^4.17.10",
+    "log-symbols": "^2.2.0",
+    "mkdirp": "^0.5.1",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2"
+  },
+  "description": "Database migration tool",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "sinon": "^5.0.7"
+  },
+  "homepage": "https://github.com/scotttesler/migurt#readme",
+  "keywords": [
+    "database",
+    "migrate",
+    "migration",
+    "postgres",
+    "postgresql",
+    "sql"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "name": "migurt",
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:scotttesler/migurt.git"
+  },
+  "scripts": {
+    "start": "node src/bin/index.js",
+    "test": "mocha --recursive"
+  },
+  "version": "0.0.1"
+}
