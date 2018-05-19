@@ -2,7 +2,16 @@
 
 _A database migration tool_
 
-## ENV
+[![Build Status](https://travis-ci.org/scotttesler/migurt.svg?branch=master)](https://travis-ci.org/scotttesler/migurt "Build status")
+[![Code Climate](https://codeclimate.com/github/scotttesler/migurt/badges/gpa.svg)](https://codeclimate.com/github/scotttesler/migurt)
+[![JavaScript Style Guide: Prettier](https://img.shields.io/badge/code%20style-Prettier-ff69b4.svg?style=flat)](https://prettier.io/ "Prettier")
+[![Dependencies](https://david-dm.org/scotttesler/migurt.svg)](https://david-dm.org/scotttesler/migurt "Dependencies")
+
+## Installation
+
+`npm i -g migurt` or `yarn global add migurt`
+
+## Environment variables
 
 migrt uses [dotenv](https://github.com/motdotla/dotenv) to parse environment
 variables from a `.env` file when `process.env.NODE_ENV != 'production'`.
@@ -31,7 +40,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
