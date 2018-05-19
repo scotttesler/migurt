@@ -29,7 +29,6 @@ async function perform({ inputName }) {
 }
 
 function validateInput({ inputName }) {
-  console.log({ inputName })
   if (typeof inputName === "string") return true;
 
   Log.error("Please enter a value for `name`.");
