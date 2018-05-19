@@ -14,8 +14,8 @@
     "migurt-seed": "./src/bin/index-seed.js"
   },
   "bugs": {
-    "email" : "scottiet123@gmail.com",
-    "url" : "https://github.com/scotttesler/migurt/issues"
+    "email": "scottiet123@gmail.com",
+    "url": "https://github.com/scotttesler/migurt/issues"
   },
   "dependencies": {
     "chalk": "^2.4.1",
@@ -54,5 +54,5 @@
     "start": "node src/bin/index.js",
     "test": "mocha --recursive"
   },
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
