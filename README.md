@@ -21,7 +21,7 @@ TABLE_NAME_SEEDS="public.seeds"
 
 # TODO
 
-[] Add MySQL support.
+- [ ] Add MySQL support.
 
 ---
 
