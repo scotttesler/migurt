@@ -11,6 +11,66 @@ _A database migration tool_
 
 `npm i -g migurt` or `yarn global add migurt`
 
+## Usage
+
+#### `migurt help [COMMAND]`
+
+Displays help.
+
+`[COMMAND]` - _Optional_. The name of a command.
+
+---
+
+#### `migurt create-migration --name <NAME>`
+
+Create new migration and matching reversion files.
+
+`<NAME>` - **Required**. The name of the migration file. Prefixed to the name will be a
+timestamp. Suffixed to the name will be ".sql".
+
+---
+
+#### `migurt create-seed --name <NAME>`
+
+Create new seed and matching reversion files.
+
+`<NAME>` - **Required**. The name of the seed file. Prefixed to the name will be a timestamp.
+Suffixed to the name will be ".sql".
+
+---
+
+#### `migurt migrate --number <NUMBER>`
+
+Run migrations.
+
+`<NUMBER>` - **Required**. The number of migrations to run.
+
+---
+
+#### `migurt seed --number <NUMBER>`
+
+Run seeds.
+
+`<NUMBER>` - **Required**. The number of seeds to run.
+
+---
+
+#### `migurt revert-migrations --number <NUMBER>`
+
+Revert migrations.
+
+`<NUMBER>` - **Required**. The number of migrations to revert. Enter a number to revert that many migrations from the latest.
+
+---
+
+#### `migurt revert-seeds --number <NUMBER>`
+
+Revert seeds.
+
+`<NUMBER>` - **Required**. The number of seeds to revert. Enter a number to revert that many seeds from the latest.
+
+---
+
 ## Environment variables
 
 migrt uses [dotenv](https://github.com/motdotla/dotenv) to parse environment
