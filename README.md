@@ -89,13 +89,13 @@ Now, write your seeds in PostgreSQL. For example
 ```sql
 -- ./db/seeds/up/1526829902471_create_companies.sql
 
-INSERT INTO public.companies (name) VALUES ('Scott');
+INSERT INTO public.companies (name) VALUES ('E Corp');
 ```
 
 ```sql
 -- ./db/seeds/down/1526829902471_create_companies.sql
 
-DELETE FROM public.companies WHERE name = 'Scott';
+DELETE FROM public.companies WHERE name = 'E Corp';
 ```
 
 ---
