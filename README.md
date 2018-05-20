@@ -4,7 +4,8 @@ _A database migration tool_
 
 [![Build Status](https://travis-ci.org/scotttesler/migurt.svg?branch=master)](https://travis-ci.org/scotttesler/migurt "Build status")
 [![Code Climate](https://codeclimate.com/github/scotttesler/migurt/badges/gpa.svg)](https://codeclimate.com/github/scotttesler/migurt)
-[![JavaScript Style Guide: Prettier](https://img.shields.io/badge/code%20style-Prettier-ff69b4.svg?style=flat)](https://prettier.io/ "Prettier")
+[![npm version](https://badge.fury.io/js/migurt.svg)](https://badge.fury.io/js/migurt)
+[![JavaScript Style Guide: Prettier](https://img.shields.io/badge/code%20style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier "Prettier")
 [![Dependencies](https://david-dm.org/scotttesler/migurt.svg)](https://david-dm.org/scotttesler/migurt "Dependencies")
 
 ## Installation
