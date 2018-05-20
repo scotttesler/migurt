@@ -18,7 +18,7 @@ Currently only works with [PostgreSQL](https://www.postgresql.org/).
 
 ## Usage
 
-#### `migurt help [COMMAND]`
+### `migurt help [COMMAND]`
 
 Displays help.
 
