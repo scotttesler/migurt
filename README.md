@@ -8,6 +8,10 @@ _A database migration tool_
 [![JavaScript Style Guide: Prettier](https://img.shields.io/badge/code%20style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier "Prettier")
 [![Dependencies](https://david-dm.org/scotttesler/migurt.svg)](https://david-dm.org/scotttesler/migurt "Dependencies")
 
+Migurt lets you write database migrations and seeds in your database's language.
+
+Currently only works with [PostgreSQL](https://www.postgresql.org/).
+
 ## Installation
 
 `npm i -g migurt` or `yarn global add migurt`
@@ -22,62 +26,124 @@ Displays help.
 
 ---
 
-#### `migurt create-migration --name <NAME>`
+### `migurt create-migration --name <NAME>`
 
 Create new migration and matching reversion files.
 
-`<NAME>` - **Required**. The name of the migration file. Prefixed to the name will be a
-timestamp. Suffixed to the name will be ".sql".
+`<NAME>` - **Required**. The name of the migration file. Prefixed to the name
+will be a timestamp. Suffixed to the name will be ".sql".
+
+#### Example
+
+```
+migurt create-migration --name create_table_companies
+```
+
+will create files `./db/migrations/up/1525396716884_create_table_companies.sql`
+and `./db/migrations/down/1525396716884_create_table_companies.sql` (creating
+the directories if they don't exist).
+
+Now, write your migrations in PostgreSQL. For example
+
+```sql
+-- ./db/migrations/up/1525396716884_create_table_companies.sql
+
+CREATE TABLE public.companies (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  name TEXT NOT NULL UNIQUE,
+  active BOOLEAN NOT NULL DEFAULT TRUE
+);
+
+CREATE UNIQUE INDEX companies_id_idx ON public.companies (id);
+CREATE UNIQUE INDEX companies_name_idx ON public.companies (name);
+CREATE INDEX companies_active_idx ON public.companies (active);
+```
+
+```sql
+-- ./db/migrations/down/1525396716884_create_table_companies.sql
+
+DROP TABLE public.companies;
+```
 
 ---
 
-#### `migurt create-seed --name <NAME>`
+### `migurt create-seed --name <NAME>`
 
 Create new seed and matching reversion files.
 
-`<NAME>` - **Required**. The name of the seed file. Prefixed to the name will be a timestamp.
-Suffixed to the name will be ".sql".
+`<NAME>` - **Required**. The name of the seed file. Prefixed to the name will be
+a timestamp. Suffixed to the name will be ".sql".
+
+#### Example
+
+```
+migurt create-seed --name create_companies
+```
+
+will create files `./db/seeds/up/1526829902471_create_companies.sql`
+and `./db/seeds/down/1526829902471_create_companies.sql` (creating
+the directories if they don't exist).
+
+Now, write your seeds in PostgreSQL. For example
+
+```sql
+-- ./db/seeds/up/1526829902471_create_companies.sql
+
+INSERT INTO public.companies (name) VALUES ('Scott');
+```
+
+```sql
+-- ./db/seeds/down/1526829902471_create_companies.sql
+
+DELETE FROM public.companies WHERE name = 'Scott';
+```
 
 ---
 
-#### `migurt migrate --number <NUMBER>`
+### `migurt migrate --number <NUMBER>`
 
 Run migrations.
 
-`<NUMBER>` - **Required**. The number of migrations to run.
+`<NUMBER>` - **Required**. The number of migrations to run. Enter a number to
+run that many migrations from the last ran migration.
 
 ---
 
-#### `migurt seed --number <NUMBER>`
+### `migurt seed --number <NUMBER>`
 
 Run seeds.
 
-`<NUMBER>` - **Required**. The number of seeds to run.
+`<NUMBER>` - **Required**. The number of seeds to run. Enter a number to run
+that many seeds from the last ran seed.
 
 ---
 
-#### `migurt revert-migrations --number <NUMBER>`
+### `migurt revert-migrations --number <NUMBER>`
 
 Revert migrations.
 
-`<NUMBER>` - **Required**. The number of migrations to revert. Enter a number to revert that many migrations from the latest.
+`<NUMBER>` - **Required**. The number of migrations to revert. Enter a number to
+revert that many migrations from the latest.
 
 ---
 
-#### `migurt revert-seeds --number <NUMBER>`
+### `migurt revert-seeds --number <NUMBER>`
 
 Revert seeds.
 
-`<NUMBER>` - **Required**. The number of seeds to revert. Enter a number to revert that many seeds from the latest.
+`<NUMBER>` - **Required**. The number of seeds to revert. Enter a number to
+revert that many seeds from the latest.
 
 ---
 
-## Environment variables
+## Configuration
 
-migrt uses [dotenv](https://github.com/motdotla/dotenv) to parse environment
-variables from a `.env` file when `process.env.NODE_ENV != 'production'`.
+migrt parses environment variables from a `.env` file when
+`process.env.NODE_ENV != 'production'`.
 
-Below are the environment variables and their defaults:
+Below are the environment variables and their defaults.
+
+NOTE: `DATABASE_URL` is required.
 
 ```javascript
 DATABASE_URL=
