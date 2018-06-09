@@ -3,7 +3,7 @@ const _reverse = require("lodash/reverse");
 const fs = require("fs");
 const path = require("path");
 const Log = require("../helpers/Log");
-const { alreadyRunFileNames, numberToRun } = require("../helpers/utils");
+const { alreadyRunFileNames, getNumberToRun } = require("../helpers/utils");
 
 class Revert {
   static async perform({ dbClient, downDir, numToRevert, tableName }) {
@@ -14,17 +14,17 @@ class Revert {
         (await alreadyRunFileNames({ dbClient, tableName })).sort()
       );
 
-      const maxIterations = numberToRun({
+      const numToRun = getNumberToRun({
         userInput: numToRevert,
         remaining: alreadyRunFilenamesSorted.length
       });
 
-      if (maxIterations === 0) {
+      if (numToRun === 0) {
         Log.info("Nothing to revert.");
         return true;
       }
 
-      for (var i = 0; i < maxIterations; i++) {
+      for (var i = 0; i < numToRun; i++) {
         const filename = alreadyRunFilenamesSorted[i];
         const sql = fs.readFileSync(path.join(downDir, filename), {
           encoding: "utf-8"
