@@ -4,7 +4,7 @@ const path = require("path");
 const CreateTableIfNotExists = require("./CreateTableIfNotExists");
 const FetchRemainingFilenames = require("./FetchRemainingFilenames");
 const Log = require("../helpers/Log");
-const { numberToRun } = require("../helpers/utils");
+const { getNumberToRun } = require("../helpers/utils");
 const { DIRECTORY_UP_SEEDS, TABLE_NAME_SEEDS } = require("../helpers/env");
 
 class RunSeeds {
@@ -22,18 +22,18 @@ class RunSeeds {
         tableName: TABLE_NAME_SEEDS
       });
       const remainingFilenamesSorted = remainingFilenames.sort();
-      const maxIterations = numberToRun({
+      const numToRun = getNumberToRun({
         userInput: inputNumber,
         remaining: remainingFilenamesSorted.length
       });
 
-      if (maxIterations === 0) {
+      if (numToRun === 0) {
         Log.info("No seeds to run.");
 
         return true;
       }
 
-      for (var i = 0; i < maxIterations; i++) {
+      for (var i = 0; i < numToRun; i++) {
         const filename = remainingFilenamesSorted[i];
         const sql = fs.readFileSync(path.join(DIRECTORY_UP_SEEDS, filename), {
           encoding: "utf-8"

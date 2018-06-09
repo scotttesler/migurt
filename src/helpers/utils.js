@@ -5,6 +5,6 @@ exports.alreadyRunFileNames = async function({ dbClient, tableName }) {
   return res.rows.map(row => row["name"]).sort();
 };
 
-exports.numberToRun = ({ userInput, remaining }) => {
+exports.getNumberToRun = ({ userInput, remaining }) => {
   return _min([parseInt(userInput, 10), remaining]);
 };
