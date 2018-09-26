@@ -2,7 +2,7 @@
   "author": {
     "name": "Scott Tesler",
     "email": "scottiet123@gmail.com",
-    "url": "https://scotttesler.github.io/"
+    "url": "https://scotttesler.com"
   },
   "bin": {
     "migurt": "./src/bin/index.js",
