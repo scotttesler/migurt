@@ -2,7 +2,7 @@ const _get = require("lodash/get");
 const _reverse = require("lodash/reverse");
 const fs = require("fs");
 const path = require("path");
-const Log = require("../helpers/Log");
+const Log = require("logurt");
 const { alreadyRunFileNames, getNumberToRun } = require("../helpers/utils");
 
 class Revert {

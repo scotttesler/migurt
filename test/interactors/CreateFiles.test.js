@@ -4,7 +4,7 @@ const mkdirp = require("mkdirp");
 const sinon = require("sinon");
 const CreateDirectoriesIfNotExists = require("../../src/interactors/CreateDirectoriesIfNotExists");
 const CreateFiles = require("../../src/interactors/CreateFiles");
-const Log = require("../../src/helpers/Log");
+const Log = require("logurt");
 
 const subject = CreateFiles.perform;
 

@@ -2,7 +2,7 @@
 
 const _includes = require("lodash/includes");
 const program = require("commander");
-const Log = require("../helpers/Log");
+const Log = require("logurt");
 const Revert = require("../interactors/Revert");
 const { Pool } = require("pg");
 const {
