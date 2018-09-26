@@ -55,5 +55,5 @@
     "start": "node src/bin/index.js",
     "test": "mocha --recursive"
   },
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
