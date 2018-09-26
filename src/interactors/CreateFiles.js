@@ -7,8 +7,9 @@ class CreateFiles {
   static async perform({ dirDown, dirUp, name }) {
     CreateDirectoriesIfNotExists.perform({ dirs: [dirUp, dirDown] });
 
-    const filenameUp = `${dirUp}/${Date.now()}_${name}.sql`;
-    const filenameDown = `${dirDown}/${Date.now()}_${name}.sql`;
+    const now = Date.now();
+    const filenameUp = `${dirUp}/${now}_${name}.sql`;
+    const filenameDown = `${dirDown}/${now}_${name}.sql`;
 
     fs.writeFileSync(filenameUp, "");
     Log.success(`Created file ${filenameUp}`);
