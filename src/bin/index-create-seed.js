@@ -2,7 +2,7 @@
 
 const program = require("commander");
 const CreateFiles = require("../interactors/CreateFiles");
-const Log = require("../helpers/Log");
+const Log = require("logurt");
 const { Pool } = require("pg");
 const {
   DIRECTORY_DOWN_SEEDS,

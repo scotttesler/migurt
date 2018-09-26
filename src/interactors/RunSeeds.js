@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const CreateTableIfNotExists = require("./CreateTableIfNotExists");
 const FetchRemainingFilenames = require("./FetchRemainingFilenames");
-const Log = require("../helpers/Log");
+const Log = require("logurt");
 const { getNumberToRun } = require("../helpers/utils");
 const { DIRECTORY_UP_SEEDS, TABLE_NAME_SEEDS } = require("../helpers/env");
 

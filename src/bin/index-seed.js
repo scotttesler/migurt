@@ -2,7 +2,7 @@
 
 const _includes = require("lodash/includes");
 const program = require("commander");
-const Log = require("../helpers/Log");
+const Log = require("logurt");
 const RunSeeds = require("../interactors/RunSeeds");
 const { Pool } = require("pg");
 const { DATABASE_URL } = require("../helpers/env");

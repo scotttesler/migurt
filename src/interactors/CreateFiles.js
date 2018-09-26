@@ -1,6 +1,6 @@
 const fs = require("fs");
 const CreateDirectoriesIfNotExists = require("./CreateDirectoriesIfNotExists");
-const Log = require("../helpers/Log");
+const Log = require("logurt");
 const { Pool } = require("pg");
 
 class CreateFiles {
