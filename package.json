@@ -19,20 +19,20 @@
   },
   "dependencies": {
     "chalk": "^2.4.2",
-    "commander": "^2.20.0",
-    "dotenv": "^8.0.0",
-    "lodash": "^4.17.11",
+    "commander": "^3.0.0",
+    "dotenv": "^8.1.0",
+    "lodash": "^4.17.15",
     "log-symbols": "^3.0.0",
     "logurt": "^4.0.0",
     "mkdirp": "^0.5.1",
-    "pg": "^7.11.0",
+    "pg": "^7.12.1",
     "pg-hstore": "^2.3.3"
   },
   "description": "Database migration tool",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.1.4",
-    "sinon": "^7.3.2"
+    "mocha": "^6.2.0",
+    "sinon": "^7.4.1"
   },
   "homepage": "https://github.com/scotttesler/migurt#readme",
   "keywords": [
