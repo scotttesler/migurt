@@ -1,9 +1,0 @@
-language: node_js
-deploy:
-  provider: npm
-  email: scottiet123@gmail.com
-  api_key:
-    secure: CkmkaRuZqSBEXVON4rORWmDEZwwtNCedKY82NvI1p4Zzlm3eOCnyANrx5HEFUfh9j1kbPlMnbAgdLb9Py/bBiJ8RpKDvic2i9lZ21lU7Uxmxio7NsV1MXBN1s45PYsIMIpU24LW33udy2S5xAQVHIQRq4jI/Bm3cjEbywXBlmtydm9IzaoOV5nXQTuRJMH/2xXiteKrh5HNR2n6pxHODXSElYKntuyQlPdYC7hiYW4jiPLL7KvKliT5nHWItLHFrECMkFfPWetbJ6ex91P/UaF7nQEZfK/ySJRUCI2rLeviM3Nj7G9BOTq8/WGFjrOsRjhexnMzbEQliJG/A8WBX6hHGne58I/84eY2HK5W3DwcvRPVRWk71ViCGcvUBLlwTu1Vb7/OFQOOHrJ/mxtY3JuOZkNvx6Hlh2jd4PetrEHL3G1/FvwnqcKpi/bG51mUwVHcN2buU7HfpNBBL1x8rErX2kCcpUbfcJOvuIojfwH8gJrDOqiiHMGzEJt3VLsr0/dVyCvNBrj/+Gekhgql/AgOyYihw1QzQ+5BLed5mMuuO9gIYdtX8PDTDpdwo12FgGFz94HDWspD6zQ7o3IxIPM25NvFwTb2eDwcmYxKgO+pn42akQHYY+TMlng2YiCMdDcYyfMBRGasDOLX2v03+F/p1IaXd9whlJJ4W1d4uqSg=
-  on:
-    branch: master
-    tags: true
