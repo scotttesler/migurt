@@ -4,10 +4,7 @@ const program = require("commander");
 const CreateFiles = require("../interactors/CreateFiles");
 const Log = require("logurt");
 const { Pool } = require("pg");
-const {
-  DIRECTORY_DOWN_SEEDS,
-  DIRECTORY_UP_SEEDS
-} = require("../helpers/env");
+const { DIRECTORY_DOWN_SEEDS, DIRECTORY_UP_SEEDS } = require("../helpers/env");
 
 program
   .option(
