@@ -9,11 +9,11 @@ _A database migration tool_
 
 Migurt lets you write database migrations and seeds in your database's language.
 
-Currently only works with [PostgreSQL](https://www.postgresql.org/).
+(Currently, only works with [PostgreSQL](https://www.postgresql.org/))
 
 ## Installation
 
-`npm i -g migurt` or `yarn global add migurt`
+`npm i -g migurt`
 
 ## Usage
 
@@ -137,7 +137,7 @@ revert that many seeds from the latest.
 
 ## Configuration
 
-migrt parses environment variables from a `.env` file when
+migurt parses environment variables from a `.env` file when
 `process.env.NODE_ENV != 'production'`.
 
 Below are the environment variables and their defaults.
