@@ -5,13 +5,13 @@
     "url": "https://scotttesler.com"
   },
   "bin": {
-    "migurt": "./src/bin/index.js",
-    "migurt-create-migration": "./src/bin/index-create-migration.js",
-    "migurt-create-seed": "./src/bin/index-create-seed.js",
-    "migurt-migrate": "./src/bin/index-migrate.js",
-    "migurt-revert-migrations": "./src/bin/index-revert-migrations.js",
-    "migurt-revert-seeds": "./src/bin/index-revert-seeds.js",
-    "migurt-seed": "./src/bin/index-seed.js"
+    "migurt": "src/bin/index.js",
+    "migurt-create-migration": "src/bin/index-create-migration.js",
+    "migurt-create-seed": "src/bin/index-create-seed.js",
+    "migurt-migrate": "src/bin/index-migrate.js",
+    "migurt-revert-migrations": "src/bin/index-revert-migrations.js",
+    "migurt-revert-seeds": "src/bin/index-revert-seeds.js",
+    "migurt-seed": "src/bin/index-seed.js"
   },
   "bugs": {
     "email": "scottiet123@gmail.com",
@@ -55,5 +55,5 @@
     "start": "node src/bin/index.js",
     "test": "mocha --recursive"
   },
-  "version": "3.0.7"
+  "version": "3.0.8"
 }
